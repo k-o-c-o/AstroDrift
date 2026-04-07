@@ -2,10 +2,10 @@
 
 > A real time, proximity based chat where users can roam a cosmic canvas and chat only when they are close to each other.
 
-![Login Screen](./assets/landingpage.png)
-![Users In Cosmos](./assets/users_in_cosmos.png)
-![Chat Panel](./assets/connected_chat.png)
-![Messages](./assets/chat.png)
+![Login Screen](./client/src/assets/landingpage.png)
+![Users In Cosmos](./client/src/assets/users_in_cosmos.png)
+![Chat Panel](./client/src/assets/connected_chat.png)
+![Messages](./client/src/assets/chat.png)
 
 ---
 
