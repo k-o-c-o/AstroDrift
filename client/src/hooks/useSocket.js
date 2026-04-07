@@ -24,17 +24,14 @@ export function useSocket(username) {
       socket.emit('user:join', { username });
     });
 
-    // Receive all existing users on join
     socket.on('users:init', (allUsers) => {
       setUsers(allUsers);
     });
 
-    // A new user joined
     socket.on('user:joined', (user) => {
       setUsers((prev) => ({ ...prev, [user.userId]: user }));
     });
 
-    // Someone moved
     socket.on('user:moved', ({ userId, x, y }) => {
       setUsers((prev) => ({
         ...prev,
@@ -42,7 +39,6 @@ export function useSocket(username) {
       }));
     });
 
-    // Someone left
     socket.on('user:left', ({ userId }) => {
       setUsers((prev) => {
         const next = { ...prev };
@@ -69,7 +65,6 @@ export function useSocket(username) {
       setMessages((prev) => [...prev, msg]);
     });
 
-    // Typing indicator
     socket.on('chat:typing', ({ username: name, isTyping }) => {
       setTypingUser(isTyping ? name : null);
     });

@@ -25,7 +25,7 @@ export default function App() {
     return <LoginScreen onJoin={(name) => { setUsername(name); setJoined(true); }} />;
   }
 
-  // Show a simple loading screen until socket assigns us an ID
+  //simple loading screen until socket assigns an ID
   if (!myId) {
     return (
       <div

@@ -6,7 +6,6 @@ export default function ChatPanel({ chatRoom, messages, myId, typingUser, onSend
   const bottomRef = useRef(null);
   const typingTimer = useRef(null);
 
-  // Auto-scroll to latest message
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
@@ -28,7 +27,6 @@ export default function ChatPanel({ chatRoom, messages, myId, typingUser, onSend
       onTyping(true);
     }
 
-    // Stop typing after 1.5s of inactivity
     clearTimeout(typingTimer.current);
     typingTimer.current = setTimeout(() => {
       setIsTyping(false);
@@ -41,7 +39,6 @@ export default function ChatPanel({ chatRoom, messages, myId, typingUser, onSend
       e.preventDefault();
       handleSend();
     }
-    // Stop event bubbling so canvas doesn't steal WASD
     e.stopPropagation();
   };
 

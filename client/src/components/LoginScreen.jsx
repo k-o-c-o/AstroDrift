@@ -60,9 +60,9 @@ export default function LoginScreen({ onJoin }) {
             </svg>
           </div>
           <div>
-            <h1 className="text-white text-xl font-semibold">Virtual Cosmos</h1>
+            <h1 className="text-white text-xl font-semibold">AstroDrift</h1>
             <p className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
-              Proximity-based virtual space
+              Proximity based virtual space
             </p>
           </div>
         </div>
